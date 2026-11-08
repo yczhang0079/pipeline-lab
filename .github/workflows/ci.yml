@@ -1,0 +1,7 @@
+name: CI # the name shown in the Actions tab
+on: [push] # TRIGGER: run on every push, automatically
+jobs:
+ test:
+ runs-on: ubuntu-latest # GitHub creates a fresh Linux machine
+ steps: # steps run in order; first failure stops the run
+ - uses: actions/checkout@v4 # step 1: copy the repo onto it
